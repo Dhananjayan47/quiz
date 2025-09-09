@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'NinjaNaruto';
+    src: url('../assets/fonts/njnaruto.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Bangers';
+    src: url('../assets/fonts/Bangers-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+ 
+  .winning-page{
+    width: 70vw;
+    height: 50vh;
+    border: black solid 0.5px;
+    border-radius: 25px;
+    background-image: url('../assets/images/win4.avif');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  row-gap:1rem;
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: #FF7B00;
+    font-family: 'NinjaNaruto';
+  text-shadow: 2px 2px 0 white; 
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  /* padding: 20px; */
+}
+.winning-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/images/win4.avif'); /* Your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(4px);      
+  opacity: 1;            /* Optional: dim the image */
+  z-index: -2;
+  /* padding: 20px; */
+}
+.winning-page::after {
+  content: "";
+  /* padding: 20px; */
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Blacky overlay */
+    z-index: -1;
+  }
+  .winning-page .font-effect{
+    font-size: 20px;
+    transition: all 0.3s ease;
+  }
+ 
+  .winning-page .font-effect:hover{
+    transform: scale(1.05);
+    text-shadow: 1px 1px 5px black;
+  }
+  .restart{
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    border: orange solid 2px;
+  }
+  .restart:hover{
+    box-shadow: orange 0px 0px 10px;
+    border: orange solid 2px;
+  }

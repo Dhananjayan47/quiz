@@ -1,0 +1,134 @@
+/* Top most container its contain the whole game */
+.game-container{
+  position: relative;
+}
+
+/* background video container */
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* main page container */
+.whole-container{
+  width: 100vw;
+  height: 100vh;
+}
+footer,header{
+  width: 100vw;
+  height: 10vh;
+  z-index: 0;
+  position: relative;
+  color: white;
+}
+
+footer::before,header::before{
+  content: "";
+  background-color: black;
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: 0.2;
+}
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  &::before{
+    border-bottom: rgb(255, 117, 117) solid 2px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    
+  }
+  
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 200;
+  &::before{
+    border-top: rgb(255, 117, 117) solid 2px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+  }
+}
+
+
+/* section container (both welcomePage and formPage are inside it)  */
+.full-container{
+  background-color: transparent;
+  width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  button{
+    height: 100%;
+    width: 20%;
+    /* font-size: small; */
+    font-weight: 500;
+      background-color: transparent;
+      border: #faa75a solid 1px;
+      color: white;
+      border-radius: 4px;
+      font-size: clamp(12px, 1.5vw, 16px);
+      transition: all 0.3s ease;
+    }
+    button:hover {
+      border: #faa75a solid 2px;
+      box-shadow: #ffd95c 0px 0px 10px;
+      transform: scale(1.05);
+    }
+   
+
+
+
+/* its the style for AudioPlayer.jsx */
+.play-btn{
+  width: 10vw;
+  height: 5vh;
+  transition: all 0.3s ease;
+}
+.play-btn:focus{
+  border: #faa75a solid 2px;
+  box-shadow: #ffd95c 0px 0px 10px;
+}
+
+
+
+
+@media(max-width:480px){
+  .game-container{
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+}
+@media (min-width:481px) {
+  .game-container{
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+  form{
+    padding: 5%;
+  }
+
+}
