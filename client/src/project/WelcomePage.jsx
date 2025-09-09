@@ -47,8 +47,9 @@ const WelcomePage = ({hidePage}) => {
         const UpdatedStoreData=getData;
         setStoreData(UpdatedStoreData)
         setGetData({name:'',message:''});
+        const apiUrl=import.meta.env.VITE_API_URL
         try{
-            const response=await axios.post('http://localhost:5000/submit',UpdatedStoreData);
+            const response=await axios.post(`${apiUrl}/submit`,UpdatedStoreData);
             console.log('Server response:', response.data);
         } catch (error) {
             console.error('Error sending data:', error);
